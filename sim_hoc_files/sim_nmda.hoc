@@ -1,0 +1,305 @@
+// A simulation on the longest basal dendrite of a Meynert2 cell - long inhibition at 0
+// Written by Oz kahana 26.4.1999
+
+// This meynert cell was fixed (muliply by 10) using treemul
+// Converting from ranka to neuron:
+// 1. Multiply the ranka format file by 10 - use the treemul program
+// 2. Converting to Neuron - use 'perl Oz_neuron <sourcefile> > <destination file>
+
+objref LDistancesVec
+
+print "Meynert simulation on the a5_1121 pathway + inhibition"
+
+objref file
+
+NoOfLSyn = 500
+objref Lsynapse[500]
+
+NoOfInhibitorySynapses = 1
+
+InhibitionDelay = 2
+
+
+objref In_synapse
+
+
+print "load the Meynert cell"
+xopen("../Cells/meynert2/meynert2.hoc")
+
+load_proc("nrnmainmenu")
+  objref vec, file
+  strdef fileN
+
+  proc Set_nsegs() {
+     forsec "a9" {diam_hold = diam   cm_hold = cm nseg=nseg*2 diam = diam_hold   cm = cm_hold }
+     forall { area(0) }
+     }
+
+  proc BasicInit() {
+	stdinit()
+	setdt()
+  }
+
+  proc RunTill() {
+	continuerun($1)
+  }
+
+proc SetSynapseProperties() {
+//     $o1.gmax = 0.0016
+     $o1.gmax = 0.0004
+     $o1.e=0
+     // taus as the default
+     tau1 = 40
+     tau2 = 0.33
+
+     // $2-> onset time
+     $o1.onset = $2
+  }
+
+  proc SetInSynapseProperties() {
+     $o1.gmax = 0.03217
+     if ($2==50000) {
+       $o1.gmax = 0.00453
+     }
+
+     $o1.risetime = 0.5
+     $o1.tfast = 7.5
+     $o1.tslow = 33
+     $o1.e=-70
+     $o1.onset = $3
+  }
+
+proc runForTotalTime(){
+     Total__Time = $1
+
+     base_time = -Total__Time
+     if (base_time<0) {
+       base_time=0
+     }
+     deltaT = Total__Time/(LTotalDistance)
+
+     print "Total Time=",Total__Time
+     for index=0,NoOfLSyn-1 {
+       SetSynapseProperties(Lsynapse[index],base_time+deltaT*(LTotalDistance-LDistancesVec.x[index]))
+     }
+
+     SetInSynapseProperties(In_synapse,Rm,base_time+deltaT*LTotalDistance+InhibitionDelay)
+     if (Total__Time<0) {
+       SetInSynapseProperties(In_synapse,Rm,InhibitionDelay)
+     }
+}
+
+proc runAndSave(){
+
+// Run  the simulation for T time
+     BasicInit()
+     RunTill(400)
+
+// Save the voltage vector
+     sprint(fileN, "vecT%d.dat",$1)
+     file = new File()
+     file.wopen(fileN)
+     vec.printf(file)
+     file.close()
+}
+
+  StartTime = 0
+  tstop = 400
+  steps_per_ms=10
+  dt=0.1
+
+
+  // Loop of different Rm
+
+    Rm = 5000
+    //if (rm_index==1) {
+    //  Rm = 50000
+    //}
+
+    // Mainen cell
+    forall { insert pas }
+    forall { e_pas = -65 }
+    forall { g_pas = 1/Rm }
+    forall { Ra = 150 }
+    forall { cm = 1 }
+
+
+    print "Set the nsegs"
+    forall nseg=1
+
+    forall { area(0.5) }
+    xopen("../Files/eparam3.hoc")
+    Set_nsegs()
+
+    print "Loading Synapses"
+      xopen("../Files/muki_nmdaMeyLongSynfile3.hoc")
+//      xopen("../Files/meyShortSynfile1.hoc")
+      objref In_synapse
+      soma In_synapse = new two_exp_syn1(0)
+
+    print "End of Synapses"
+
+    nsegments = 0
+    forall {
+      nsegments = nsegments + nseg
+    }
+    print nsegments," segments."
+
+  NoOfTraces=287
+
+  objref TotalTimes
+  TotalTimes = new Vector(288,0)
+
+  i=0
+  for ii=0,111 {
+    TotalTimes.x[i] = -300 + 600 * ii / 240
+    i=i+1
+  }
+
+TotalTimes.x[i] = -22
+i=i+1
+TotalTimes.x[i] = -21.5
+i=i+1
+TotalTimes.x[i] = -21
+i=i+1
+TotalTimes.x[i] = -20.5
+i=i+1
+TotalTimes.x[i] = -20
+i=i+1
+TotalTimes.x[i] = -19.5
+i=i+1
+TotalTimes.x[i] = -19
+i=i+1
+TotalTimes.x[i] = -18.5
+i=i+1
+TotalTimes.x[i] = -18
+i=i+1
+TotalTimes.x[i] = -17.5
+i=i+1
+TotalTimes.x[i] = -15
+i=i+1
+TotalTimes.x[i] = -12.5
+i=i+1
+TotalTimes.x[i] = -10
+i=i+1
+TotalTimes.x[i] = -9.5
+i=i+1
+TotalTimes.x[i] = -9
+i=i+1
+TotalTimes.x[i] = -8.5
+i=i+1
+TotalTimes.x[i] = -8
+i=i+1
+TotalTimes.x[i] = -7.5
+i=i+1
+TotalTimes.x[i] = -7
+i=i+1
+TotalTimes.x[i] = -6.5
+i=i+1
+TotalTimes.x[i] = -6
+i=i+1
+TotalTimes.x[i] = -5.5
+i=i+1
+TotalTimes.x[i] = -5
+i=i+1
+TotalTimes.x[i] = -2.5
+i=i+1
+TotalTimes.x[i] = -2
+i=i+1
+TotalTimes.x[i] = -1.5
+i=i+1
+TotalTimes.x[i] = -1.3
+i=i+1
+TotalTimes.x[i] = -1.1
+i=i+1
+TotalTimes.x[i] = -0.8
+i=i+1
+TotalTimes.x[i] = -0.7
+i=i+1
+TotalTimes.x[i] = -0.6
+i=i+1
+TotalTimes.x[i] = -0.0001
+i=i+1
+TotalTimes.x[i] = 0.6
+i=i+1
+TotalTimes.x[i] = 0.7
+i=i+1
+TotalTimes.x[i] = 0.8
+i=i+1
+TotalTimes.x[i] = 1.1
+i=i+1
+TotalTimes.x[i] = 1.3
+i=i+1
+TotalTimes.x[i] = 1.5
+i=i+1
+TotalTimes.x[i] = 2
+i=i+1
+TotalTimes.x[i] = 2.5
+i=i+1
+TotalTimes.x[i] = 5
+i=i+1
+TotalTimes.x[i] = 5.5
+i=i+1
+TotalTimes.x[i] = 6
+i=i+1
+TotalTimes.x[i] = 6.5
+i=i+1
+TotalTimes.x[i] = 7
+i=i+1
+TotalTimes.x[i] = 7.5
+i=i+1
+TotalTimes.x[i] = 8
+i=i+1
+TotalTimes.x[i] = 8.5
+i=i+1
+TotalTimes.x[i] = 9
+i=i+1
+TotalTimes.x[i] = 9.5
+i=i+1
+TotalTimes.x[i] = 10
+i=i+1
+TotalTimes.x[i] = 12.5
+i=i+1
+TotalTimes.x[i] = 15
+i=i+1
+TotalTimes.x[i] = 17.5
+i=i+1
+TotalTimes.x[i] = 18
+i=i+1
+TotalTimes.x[i] = 18.5
+i=i+1
+TotalTimes.x[i] = 19
+i=i+1
+TotalTimes.x[i] = 19.5
+i=i+1
+TotalTimes.x[i] = 20
+i=i+1
+TotalTimes.x[i] = 20.5
+i=i+1
+TotalTimes.x[i] = 21
+i=i+1
+TotalTimes.x[i] = 21.5
+i=i+1
+TotalTimes.x[i] = 22
+i=i+1
+
+for ii=129,241 {
+  TotalTimes.x[i] = -300 + 600 * ii / 240
+  i=i+1
+ }
+
+
+    for iii=0,NoOfTraces {
+
+     // create the voltage vector
+     vec = new Vector(200000,0)
+     vec.record(&soma.v(0.5))
+
+     //TotalTime = -300 + 600 * iii / 240
+     TotalTime = TotalTimes.x[iii]
+     runForTotalTime(TotalTime)
+
+     runAndSave(iii)
+    }
+
+

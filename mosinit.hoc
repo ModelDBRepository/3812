@@ -1,0 +1,49 @@
+load_file("nrngui.hoc")
+load_file("sim_hoc_files/sim_ampa.hoc")
+x=0
+objref sh, fig4b
+load_file("mosinit.ses")
+
+// display the AlphaSynapse synaptic locations
+objref aslist
+//sh = new Shape()
+//sh.save_name("sh")
+sh = Shape[0]
+aslist = new List("AlphaSynapse")
+for i=0, aslist.count-1 {
+	sh.point_mark(aslist.object(i), 3)
+}
+
+strdef tstr
+objref vvec, tvec
+vvec = new Vector(10000, 0)
+tvec = new Vector(10000, 0)
+
+//fig4b = new Graph()
+//fig4b.size(-80,80,-70,-40)
+//fig4b.save_name("fig4b")
+fig4b = Graph[1]
+
+proc fig4bCurve() {
+	tstop=80
+	runForTotalTime($1)
+	sprint(tstr, "%d", $1)
+	vvec.label(tstr)
+	vvec.record(&soma.v(0.5))
+	tvec.record(&t)
+	run()
+	if (stoprun != 0) {return}
+	if (base_time > 0) { tvec.sub(base_time) }
+	vvec.line(fig4b, tvec)
+}
+
+for case(&x, 0, 10, 20, 30, -10, -20, -30, 65, -75) {
+	fig4bCurve(x)
+	if (stoprun != 0) {break}
+}	
+
+/*
+xpanel("Figure 4b Curve")
+xvalue("Run with Sweep Duration", "x", 1, "fig4bCurve(x)")
+xpanel()
+*/

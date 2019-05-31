@@ -1,0 +1,50 @@
+// Originaly written by Muki - 
+// the original version is located at /first-cells/syntest/tools
+// Updated by O.K at 26.6.98
+
+print "Starting Eparams"
+
+
+proc cut_segments ( ) { local diam_hold, cm_hold
+        forall { area (0) }
+        forall  {
+                        /* to activate the diameter calculation.*/
+                { diam_hold = diam   cm_hold = cm }
+                Lambda = sqrt ((diam*1E-4)/(Ra * 4 * g_pas)) * 1E4
+                        /*Lambda in microns */
+                Lambda = L / ( Lambda * $1 ) + 0.5
+                if ( Lambda < 1 ) {
+                        nseg = 1
+                }  else  {  nseg = Lambda
+                }
+                { diam = diam_hold   cm = cm_hold }
+        }
+}
+
+
+cut_segments (0.1) // Each segment is 0.001 lambda
+	 
+        /* This proc must be before the insertion
+           of hh since changing nseg 
+            will delete the membrane mechanisms. */
+
+
+// For axons
+
+proc cut_AIS ( ) { local hold_diam hold_cm
+	hold_diam = diam
+	hold_cm = cm
+	nseg = 2
+	diam = hold_diam
+	cm = hold_cm
+} 
+
+	/* Lambda = sqrt ( )  */
+
+
+forsec "A" { cut_AIS() }
+
+forall area ( 0 )
+
+print "Eparams completed"
+

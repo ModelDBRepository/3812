@@ -1,0 +1,13 @@
+Example simulation produces a few curves from fig 4b.
+Discrepancies may be due to differences between the
+synapse file used by the figure and the synapse locations
+defined in Files/meyLongSynfile3.hoc
+
+mosinit.hoc and mosinit.ses file were created by Michael Hines.
+In order to run the example, the last few lines of
+sim_hoc_files/sim_ampa.hoc were commented out to avoid generating
+a large number of results files. Also the mod files were moved out of
+a Mod subdirectory and into the top directory to conform to the
+policy of the mos2nrn autolaunch program.
+
+

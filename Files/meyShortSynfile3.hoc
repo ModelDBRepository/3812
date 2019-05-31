@@ -1,0 +1,606 @@
+objref SDistancesVec
+SDistancesVec = new Vector(148)
+
+NoOfSSyn = 148
+objref Ssynapse[148]
+
+access soma
+distance()
+
+base_d = distance(0.5)
+
+access a1_111
+STotalDistance = distance(1)
+
+access a1_1
+a1_1 Ssynapse[0] = new AlphaSynapse(0.223245)
+SDistancesVec.x[0] = -base_d + distance(0.223245)
+
+access a1_1
+a1_1 Ssynapse[1] = new AlphaSynapse(0.787554)
+SDistancesVec.x[1] = -base_d + distance(0.787554)
+
+access a1_1
+a1_1 Ssynapse[2] = new AlphaSynapse(0.436209)
+SDistancesVec.x[2] = -base_d + distance(0.436209)
+
+access a1_1
+a1_1 Ssynapse[3] = new AlphaSynapse(0.687726)
+SDistancesVec.x[3] = -base_d + distance(0.687726)
+
+access a1_1
+a1_1 Ssynapse[4] = new AlphaSynapse(0.073563)
+SDistancesVec.x[4] = -base_d + distance(0.073563)
+
+access a1_11
+a1_11 Ssynapse[5] = new AlphaSynapse(0.076170)
+SDistancesVec.x[5] = -base_d + distance(0.076170)
+
+access a1_11
+a1_11 Ssynapse[6] = new AlphaSynapse(0.643546)
+SDistancesVec.x[6] = -base_d + distance(0.643546)
+
+access a1_111
+a1_111 Ssynapse[7] = new AlphaSynapse(0.167620)
+SDistancesVec.x[7] = -base_d + distance(0.167620)
+
+access a1_111
+a1_111 Ssynapse[8] = new AlphaSynapse(0.365803)
+SDistancesVec.x[8] = -base_d + distance(0.365803)
+
+access a1_111
+a1_111 Ssynapse[9] = new AlphaSynapse(0.252304)
+SDistancesVec.x[9] = -base_d + distance(0.252304)
+
+access a1_111
+a1_111 Ssynapse[10] = new AlphaSynapse(0.898549)
+SDistancesVec.x[10] = -base_d + distance(0.898549)
+
+access a1_111
+a1_111 Ssynapse[11] = new AlphaSynapse(0.271569)
+SDistancesVec.x[11] = -base_d + distance(0.271569)
+
+access a1_111
+a1_111 Ssynapse[12] = new AlphaSynapse(0.700814)
+SDistancesVec.x[12] = -base_d + distance(0.700814)
+
+access a1_111
+a1_111 Ssynapse[13] = new AlphaSynapse(0.621098)
+SDistancesVec.x[13] = -base_d + distance(0.621098)
+
+access a1_111
+a1_111 Ssynapse[14] = new AlphaSynapse(0.111109)
+SDistancesVec.x[14] = -base_d + distance(0.111109)
+
+access a1_111
+a1_111 Ssynapse[15] = new AlphaSynapse(0.885315)
+SDistancesVec.x[15] = -base_d + distance(0.885315)
+
+access a1_111
+a1_111 Ssynapse[16] = new AlphaSynapse(0.615672)
+SDistancesVec.x[16] = -base_d + distance(0.615672)
+
+access a1_111
+a1_111 Ssynapse[17] = new AlphaSynapse(0.937660)
+SDistancesVec.x[17] = -base_d + distance(0.937660)
+
+access a1_111
+a1_111 Ssynapse[18] = new AlphaSynapse(0.918537)
+SDistancesVec.x[18] = -base_d + distance(0.918537)
+
+access a1_111
+a1_111 Ssynapse[19] = new AlphaSynapse(0.528691)
+SDistancesVec.x[19] = -base_d + distance(0.528691)
+
+access a1_111
+a1_111 Ssynapse[20] = new AlphaSynapse(0.751322)
+SDistancesVec.x[20] = -base_d + distance(0.751322)
+
+access a1_111
+a1_111 Ssynapse[21] = new AlphaSynapse(0.326698)
+SDistancesVec.x[21] = -base_d + distance(0.326698)
+
+access a1_111
+a1_111 Ssynapse[22] = new AlphaSynapse(0.032285)
+SDistancesVec.x[22] = -base_d + distance(0.032285)
+
+access a1_111
+a1_111 Ssynapse[23] = new AlphaSynapse(0.808396)
+SDistancesVec.x[23] = -base_d + distance(0.808396)
+
+access a1_111
+a1_111 Ssynapse[24] = new AlphaSynapse(0.520516)
+SDistancesVec.x[24] = -base_d + distance(0.520516)
+
+access a1_111
+a1_111 Ssynapse[25] = new AlphaSynapse(0.629439)
+SDistancesVec.x[25] = -base_d + distance(0.629439)
+
+access a1_111
+a1_111 Ssynapse[26] = new AlphaSynapse(0.397654)
+SDistancesVec.x[26] = -base_d + distance(0.397654)
+
+access a1_111
+a1_111 Ssynapse[27] = new AlphaSynapse(0.258849)
+SDistancesVec.x[27] = -base_d + distance(0.258849)
+
+access a1_111
+a1_111 Ssynapse[28] = new AlphaSynapse(0.441866)
+SDistancesVec.x[28] = -base_d + distance(0.441866)
+
+access a1_111
+a1_111 Ssynapse[29] = new AlphaSynapse(0.916081)
+SDistancesVec.x[29] = -base_d + distance(0.916081)
+
+access a1_111
+a1_111 Ssynapse[30] = new AlphaSynapse(0.928385)
+SDistancesVec.x[30] = -base_d + distance(0.928385)
+
+access a1_111
+a1_111 Ssynapse[31] = new AlphaSynapse(0.478261)
+SDistancesVec.x[31] = -base_d + distance(0.478261)
+
+access a1_111
+a1_111 Ssynapse[32] = new AlphaSynapse(0.540075)
+SDistancesVec.x[32] = -base_d + distance(0.540075)
+
+access a1_111
+a1_111 Ssynapse[33] = new AlphaSynapse(0.524557)
+SDistancesVec.x[33] = -base_d + distance(0.524557)
+
+access a1_111
+a1_111 Ssynapse[34] = new AlphaSynapse(0.898074)
+SDistancesVec.x[34] = -base_d + distance(0.898074)
+
+access a1_111
+a1_111 Ssynapse[35] = new AlphaSynapse(0.977130)
+SDistancesVec.x[35] = -base_d + distance(0.977130)
+
+access a1_111
+a1_111 Ssynapse[36] = new AlphaSynapse(0.657972)
+SDistancesVec.x[36] = -base_d + distance(0.657972)
+
+access a1_111
+a1_111 Ssynapse[37] = new AlphaSynapse(0.423733)
+SDistancesVec.x[37] = -base_d + distance(0.423733)
+
+access a1_111
+a1_111 Ssynapse[38] = new AlphaSynapse(0.257156)
+SDistancesVec.x[38] = -base_d + distance(0.257156)
+
+access a1_111
+a1_111 Ssynapse[39] = new AlphaSynapse(0.255538)
+SDistancesVec.x[39] = -base_d + distance(0.255538)
+
+access a1_111
+a1_111 Ssynapse[40] = new AlphaSynapse(0.911992)
+SDistancesVec.x[40] = -base_d + distance(0.911992)
+
+access a1_111
+a1_111 Ssynapse[41] = new AlphaSynapse(0.542913)
+SDistancesVec.x[41] = -base_d + distance(0.542913)
+
+access a1_111
+a1_111 Ssynapse[42] = new AlphaSynapse(0.753982)
+SDistancesVec.x[42] = -base_d + distance(0.753982)
+
+access a1_111
+a1_111 Ssynapse[43] = new AlphaSynapse(0.940460)
+SDistancesVec.x[43] = -base_d + distance(0.940460)
+
+access a1_111
+a1_111 Ssynapse[44] = new AlphaSynapse(0.177519)
+SDistancesVec.x[44] = -base_d + distance(0.177519)
+
+access a1_111
+a1_111 Ssynapse[45] = new AlphaSynapse(0.127554)
+SDistancesVec.x[45] = -base_d + distance(0.127554)
+
+access a1_111
+a1_111 Ssynapse[46] = new AlphaSynapse(0.056499)
+SDistancesVec.x[46] = -base_d + distance(0.056499)
+
+access a1_111
+a1_111 Ssynapse[47] = new AlphaSynapse(0.095227)
+SDistancesVec.x[47] = -base_d + distance(0.095227)
+
+access a1_111
+a1_111 Ssynapse[48] = new AlphaSynapse(0.856459)
+SDistancesVec.x[48] = -base_d + distance(0.856459)
+
+access a1_111
+a1_111 Ssynapse[49] = new AlphaSynapse(0.073315)
+SDistancesVec.x[49] = -base_d + distance(0.073315)
+
+access a1_111
+a1_111 Ssynapse[50] = new AlphaSynapse(0.226118)
+SDistancesVec.x[50] = -base_d + distance(0.226118)
+
+access a1_111
+a1_111 Ssynapse[51] = new AlphaSynapse(0.254080)
+SDistancesVec.x[51] = -base_d + distance(0.254080)
+
+access a1_111
+a1_111 Ssynapse[52] = new AlphaSynapse(0.646868)
+SDistancesVec.x[52] = -base_d + distance(0.646868)
+
+access a1_111
+a1_111 Ssynapse[53] = new AlphaSynapse(0.719621)
+SDistancesVec.x[53] = -base_d + distance(0.719621)
+
+access a1_111
+a1_111 Ssynapse[54] = new AlphaSynapse(0.344910)
+SDistancesVec.x[54] = -base_d + distance(0.344910)
+
+access a1_111
+a1_111 Ssynapse[55] = new AlphaSynapse(0.816639)
+SDistancesVec.x[55] = -base_d + distance(0.816639)
+
+access a1_111
+a1_111 Ssynapse[56] = new AlphaSynapse(0.899141)
+SDistancesVec.x[56] = -base_d + distance(0.899141)
+
+access a1_111
+a1_111 Ssynapse[57] = new AlphaSynapse(0.223970)
+SDistancesVec.x[57] = -base_d + distance(0.223970)
+
+access a1_111
+a1_111 Ssynapse[58] = new AlphaSynapse(0.495896)
+SDistancesVec.x[58] = -base_d + distance(0.495896)
+
+access a1_111
+a1_111 Ssynapse[59] = new AlphaSynapse(0.780225)
+SDistancesVec.x[59] = -base_d + distance(0.780225)
+
+access a1_111
+a1_111 Ssynapse[60] = new AlphaSynapse(0.642282)
+SDistancesVec.x[60] = -base_d + distance(0.642282)
+
+access a1_111
+a1_111 Ssynapse[61] = new AlphaSynapse(0.545371)
+SDistancesVec.x[61] = -base_d + distance(0.545371)
+
+access a1_111
+a1_111 Ssynapse[62] = new AlphaSynapse(0.349115)
+SDistancesVec.x[62] = -base_d + distance(0.349115)
+
+access a1_111
+a1_111 Ssynapse[63] = new AlphaSynapse(0.034687)
+SDistancesVec.x[63] = -base_d + distance(0.034687)
+
+access a1_111
+a1_111 Ssynapse[64] = new AlphaSynapse(0.595301)
+SDistancesVec.x[64] = -base_d + distance(0.595301)
+
+access a1_111
+a1_111 Ssynapse[65] = new AlphaSynapse(0.428537)
+SDistancesVec.x[65] = -base_d + distance(0.428537)
+
+access a1_111
+a1_111 Ssynapse[66] = new AlphaSynapse(0.015842)
+SDistancesVec.x[66] = -base_d + distance(0.015842)
+
+access a1_111
+a1_111 Ssynapse[67] = new AlphaSynapse(0.653336)
+SDistancesVec.x[67] = -base_d + distance(0.653336)
+
+access a1_111
+a1_111 Ssynapse[68] = new AlphaSynapse(0.313762)
+SDistancesVec.x[68] = -base_d + distance(0.313762)
+
+access a1_111
+a1_111 Ssynapse[69] = new AlphaSynapse(0.819413)
+SDistancesVec.x[69] = -base_d + distance(0.819413)
+
+access a1_111
+a1_111 Ssynapse[70] = new AlphaSynapse(0.847715)
+SDistancesVec.x[70] = -base_d + distance(0.847715)
+
+access a1_111
+a1_111 Ssynapse[71] = new AlphaSynapse(0.983309)
+SDistancesVec.x[71] = -base_d + distance(0.983309)
+
+access a1_111
+a1_111 Ssynapse[72] = new AlphaSynapse(0.883715)
+SDistancesVec.x[72] = -base_d + distance(0.883715)
+
+access a1_111
+a1_111 Ssynapse[73] = new AlphaSynapse(0.115025)
+SDistancesVec.x[73] = -base_d + distance(0.115025)
+
+access a1_111
+a1_111 Ssynapse[74] = new AlphaSynapse(0.862695)
+SDistancesVec.x[74] = -base_d + distance(0.862695)
+
+access a1_111
+a1_111 Ssynapse[75] = new AlphaSynapse(0.020248)
+SDistancesVec.x[75] = -base_d + distance(0.020248)
+
+access a1_111
+a1_111 Ssynapse[76] = new AlphaSynapse(0.638443)
+SDistancesVec.x[76] = -base_d + distance(0.638443)
+
+access a1_111
+a1_111 Ssynapse[77] = new AlphaSynapse(0.833477)
+SDistancesVec.x[77] = -base_d + distance(0.833477)
+
+access a1_111
+a1_111 Ssynapse[78] = new AlphaSynapse(0.286981)
+SDistancesVec.x[78] = -base_d + distance(0.286981)
+
+access a1_111
+a1_111 Ssynapse[79] = new AlphaSynapse(0.595124)
+SDistancesVec.x[79] = -base_d + distance(0.595124)
+
+access a1_111
+a1_111 Ssynapse[80] = new AlphaSynapse(0.952670)
+SDistancesVec.x[80] = -base_d + distance(0.952670)
+
+access a1_111
+a1_111 Ssynapse[81] = new AlphaSynapse(0.127375)
+SDistancesVec.x[81] = -base_d + distance(0.127375)
+
+access a1_111
+a1_111 Ssynapse[82] = new AlphaSynapse(0.722502)
+SDistancesVec.x[82] = -base_d + distance(0.722502)
+
+access a1_111
+a1_111 Ssynapse[83] = new AlphaSynapse(0.507249)
+SDistancesVec.x[83] = -base_d + distance(0.507249)
+
+access a1_112
+a1_112 Ssynapse[84] = new AlphaSynapse(0.286609)
+SDistancesVec.x[84] = -base_d + distance(0.286609)
+
+access a1_112
+a1_112 Ssynapse[85] = new AlphaSynapse(0.980985)
+SDistancesVec.x[85] = -base_d + distance(0.980985)
+
+access a1_112
+a1_112 Ssynapse[86] = new AlphaSynapse(0.018868)
+SDistancesVec.x[86] = -base_d + distance(0.018868)
+
+access a1_112
+a1_112 Ssynapse[87] = new AlphaSynapse(0.308401)
+SDistancesVec.x[87] = -base_d + distance(0.308401)
+
+access a1_112
+a1_112 Ssynapse[88] = new AlphaSynapse(0.071483)
+SDistancesVec.x[88] = -base_d + distance(0.071483)
+
+access a1_112
+a1_112 Ssynapse[89] = new AlphaSynapse(0.938107)
+SDistancesVec.x[89] = -base_d + distance(0.938107)
+
+access a1_112
+a1_112 Ssynapse[90] = new AlphaSynapse(0.420555)
+SDistancesVec.x[90] = -base_d + distance(0.420555)
+
+access a1_112
+a1_112 Ssynapse[91] = new AlphaSynapse(0.918167)
+SDistancesVec.x[91] = -base_d + distance(0.918167)
+
+access a1_112
+a1_112 Ssynapse[92] = new AlphaSynapse(0.411052)
+SDistancesVec.x[92] = -base_d + distance(0.411052)
+
+access a1_112
+a1_112 Ssynapse[93] = new AlphaSynapse(0.456887)
+SDistancesVec.x[93] = -base_d + distance(0.456887)
+
+access a1_112
+a1_112 Ssynapse[94] = new AlphaSynapse(0.801601)
+SDistancesVec.x[94] = -base_d + distance(0.801601)
+
+access a1_112
+a1_112 Ssynapse[95] = new AlphaSynapse(0.551531)
+SDistancesVec.x[95] = -base_d + distance(0.551531)
+
+access a1_112
+a1_112 Ssynapse[96] = new AlphaSynapse(0.601402)
+SDistancesVec.x[96] = -base_d + distance(0.601402)
+
+access a1_112
+a1_112 Ssynapse[97] = new AlphaSynapse(0.574044)
+SDistancesVec.x[97] = -base_d + distance(0.574044)
+
+access a1_112
+a1_112 Ssynapse[98] = new AlphaSynapse(0.306848)
+SDistancesVec.x[98] = -base_d + distance(0.306848)
+
+access a1_112
+a1_112 Ssynapse[99] = new AlphaSynapse(0.685028)
+SDistancesVec.x[99] = -base_d + distance(0.685028)
+
+access a1_112
+a1_112 Ssynapse[100] = new AlphaSynapse(0.255318)
+SDistancesVec.x[100] = -base_d + distance(0.255318)
+
+access a1_112
+a1_112 Ssynapse[101] = new AlphaSynapse(0.062605)
+SDistancesVec.x[101] = -base_d + distance(0.062605)
+
+access a1_112
+a1_112 Ssynapse[102] = new AlphaSynapse(0.381378)
+SDistancesVec.x[102] = -base_d + distance(0.381378)
+
+access a1_112
+a1_112 Ssynapse[103] = new AlphaSynapse(0.202355)
+SDistancesVec.x[103] = -base_d + distance(0.202355)
+
+access a1_112
+a1_112 Ssynapse[104] = new AlphaSynapse(0.789008)
+SDistancesVec.x[104] = -base_d + distance(0.789008)
+
+access a1_112
+a1_112 Ssynapse[105] = new AlphaSynapse(0.522419)
+SDistancesVec.x[105] = -base_d + distance(0.522419)
+
+access a1_112
+a1_112 Ssynapse[106] = new AlphaSynapse(0.330167)
+SDistancesVec.x[106] = -base_d + distance(0.330167)
+
+access a1_112
+a1_112 Ssynapse[107] = new AlphaSynapse(0.532667)
+SDistancesVec.x[107] = -base_d + distance(0.532667)
+
+access a1_112
+a1_112 Ssynapse[108] = new AlphaSynapse(0.170413)
+SDistancesVec.x[108] = -base_d + distance(0.170413)
+
+access a1_112
+a1_112 Ssynapse[109] = new AlphaSynapse(0.369441)
+SDistancesVec.x[109] = -base_d + distance(0.369441)
+
+access a1_112
+a1_112 Ssynapse[110] = new AlphaSynapse(0.717105)
+SDistancesVec.x[110] = -base_d + distance(0.717105)
+
+access a1_112
+a1_112 Ssynapse[111] = new AlphaSynapse(0.793807)
+SDistancesVec.x[111] = -base_d + distance(0.793807)
+
+access a1_112
+a1_112 Ssynapse[112] = new AlphaSynapse(0.558176)
+SDistancesVec.x[112] = -base_d + distance(0.558176)
+
+access a1_112
+a1_112 Ssynapse[113] = new AlphaSynapse(0.417653)
+SDistancesVec.x[113] = -base_d + distance(0.417653)
+
+access a1_112
+a1_112 Ssynapse[114] = new AlphaSynapse(0.492191)
+SDistancesVec.x[114] = -base_d + distance(0.492191)
+
+access a1_112
+a1_112 Ssynapse[115] = new AlphaSynapse(0.771469)
+SDistancesVec.x[115] = -base_d + distance(0.771469)
+
+access a1_112
+a1_112 Ssynapse[116] = new AlphaSynapse(0.100637)
+SDistancesVec.x[116] = -base_d + distance(0.100637)
+
+access a1_112
+a1_112 Ssynapse[117] = new AlphaSynapse(0.832287)
+SDistancesVec.x[117] = -base_d + distance(0.832287)
+
+access a1_112
+a1_112 Ssynapse[118] = new AlphaSynapse(0.481414)
+SDistancesVec.x[118] = -base_d + distance(0.481414)
+
+access a1_12
+a1_12 Ssynapse[119] = new AlphaSynapse(0.054003)
+SDistancesVec.x[119] = -base_d + distance(0.054003)
+
+access a1_12
+a1_12 Ssynapse[120] = new AlphaSynapse(0.431213)
+SDistancesVec.x[120] = -base_d + distance(0.431213)
+
+access a1_12
+a1_12 Ssynapse[121] = new AlphaSynapse(0.737673)
+SDistancesVec.x[121] = -base_d + distance(0.737673)
+
+access a1_12
+a1_12 Ssynapse[122] = new AlphaSynapse(0.579776)
+SDistancesVec.x[122] = -base_d + distance(0.579776)
+
+access a1_12
+a1_12 Ssynapse[123] = new AlphaSynapse(0.840882)
+SDistancesVec.x[123] = -base_d + distance(0.840882)
+
+access a1_12
+a1_12 Ssynapse[124] = new AlphaSynapse(0.872341)
+SDistancesVec.x[124] = -base_d + distance(0.872341)
+
+access a1_12
+a1_12 Ssynapse[125] = new AlphaSynapse(0.033050)
+SDistancesVec.x[125] = -base_d + distance(0.033050)
+
+access a1_12
+a1_12 Ssynapse[126] = new AlphaSynapse(0.385308)
+SDistancesVec.x[126] = -base_d + distance(0.385308)
+
+access a1_12
+a1_12 Ssynapse[127] = new AlphaSynapse(0.478771)
+SDistancesVec.x[127] = -base_d + distance(0.478771)
+
+access a1_12
+a1_12 Ssynapse[128] = new AlphaSynapse(0.134333)
+SDistancesVec.x[128] = -base_d + distance(0.134333)
+
+access a1_12
+a1_12 Ssynapse[129] = new AlphaSynapse(0.170788)
+SDistancesVec.x[129] = -base_d + distance(0.170788)
+
+access a1_12
+a1_12 Ssynapse[130] = new AlphaSynapse(0.146433)
+SDistancesVec.x[130] = -base_d + distance(0.146433)
+
+access a1_12
+a1_12 Ssynapse[131] = new AlphaSynapse(0.854099)
+SDistancesVec.x[131] = -base_d + distance(0.854099)
+
+access a1_12
+a1_12 Ssynapse[132] = new AlphaSynapse(0.578059)
+SDistancesVec.x[132] = -base_d + distance(0.578059)
+
+access a1_12
+a1_12 Ssynapse[133] = new AlphaSynapse(0.164613)
+SDistancesVec.x[133] = -base_d + distance(0.164613)
+
+access a1_12
+a1_12 Ssynapse[134] = new AlphaSynapse(0.345272)
+SDistancesVec.x[134] = -base_d + distance(0.345272)
+
+access a1_12
+a1_12 Ssynapse[135] = new AlphaSynapse(0.978176)
+SDistancesVec.x[135] = -base_d + distance(0.978176)
+
+access a1_12
+a1_12 Ssynapse[136] = new AlphaSynapse(0.147866)
+SDistancesVec.x[136] = -base_d + distance(0.147866)
+
+access a1_12
+a1_12 Ssynapse[137] = new AlphaSynapse(0.832208)
+SDistancesVec.x[137] = -base_d + distance(0.832208)
+
+access a1_12
+a1_12 Ssynapse[138] = new AlphaSynapse(0.476282)
+SDistancesVec.x[138] = -base_d + distance(0.476282)
+
+access a1_12
+a1_12 Ssynapse[139] = new AlphaSynapse(0.773441)
+SDistancesVec.x[139] = -base_d + distance(0.773441)
+
+access a1_12
+a1_12 Ssynapse[140] = new AlphaSynapse(0.522584)
+SDistancesVec.x[140] = -base_d + distance(0.522584)
+
+access a1_12
+a1_12 Ssynapse[141] = new AlphaSynapse(0.267720)
+SDistancesVec.x[141] = -base_d + distance(0.267720)
+
+access a1_12
+a1_12 Ssynapse[142] = new AlphaSynapse(0.143867)
+SDistancesVec.x[142] = -base_d + distance(0.143867)
+
+access a1_12
+a1_12 Ssynapse[143] = new AlphaSynapse(0.258515)
+SDistancesVec.x[143] = -base_d + distance(0.258515)
+
+access a1_12
+a1_12 Ssynapse[144] = new AlphaSynapse(0.466611)
+SDistancesVec.x[144] = -base_d + distance(0.466611)
+
+access a1_12
+a1_12 Ssynapse[145] = new AlphaSynapse(0.282643)
+SDistancesVec.x[145] = -base_d + distance(0.282643)
+
+access a1_12
+a1_12 Ssynapse[146] = new AlphaSynapse(0.413028)
+SDistancesVec.x[146] = -base_d + distance(0.413028)
+
+access a1_12
+a1_12 Ssynapse[147] = new AlphaSynapse(0.769828)
+SDistancesVec.x[147] = -base_d + distance(0.769828)
+
